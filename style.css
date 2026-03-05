@@ -1,6 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** Superusuario - root  
+Cambiar de horizontal a vertical los elementos utilizamos flex **/
+
 :root {
     --blanco: #ffffff;
-    --grisClaro: #f8f9fa;   
+    --grisClaro: #f8f9fa;
     --gris: #57626b;
     --grisOscuro: #353a49;
     --azul: #1a73e8;
@@ -10,4 +19,36 @@
 
 body {
     font-family: var(--fuentePrincipal);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gris);
+
+}
+
+.links img {
+    width: 40px;
+    height: 40px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
