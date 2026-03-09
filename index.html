@@ -15,22 +15,18 @@
   </head>
 
   <body>
-    <!-- Dentro del encabezado hay una barra de navegación con de izquierda a derecha: izqda (El logo de google + 6 enlaces) y 4 iconos a la derecha (lupa + ? + carrito + login)   -->
-
     <nav>
-      <!-- Para no utilizar DIV para agrupar los elementos utilizo listas desordenadas y dentro listas ordenadas  -->
-      <!-- Enlaces izquierda -->
-
-      <ul class="links">
-        <li><img src="img/google-logo.png" alt="logo" /></li>
-        <li><a href="#">Phones</a></li>
-        <li><a href="./pages/earbuds.html">Earbuds</a></li>
-        <li><a href="./pages/watches.html">Watches</a></li>
-        <li><a href="#">Smart Home</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Subscriptions</a></li>
-      </ul>
-      <!-- Enlaces ICONOS derecha -->
+      <div class="links_contain">
+        <img src="img/google-logo.png" alt="logo" />
+        <ul class="links">
+          <li><a href="#">Phones</a></li>
+          <li><a href="./pages/earbuds.html">Earbuds</a></li>
+          <li><a href="./pages/watches.html">Watches</a></li>
+          <li><a href="#">Smart Home</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+      </div>
       <ul class="icons">
         <li>
           <a href="#"><img src="img/icons/Search.svg" alt="buscador" /></a>
@@ -44,12 +40,30 @@
         <li>
           <a href="#"><img src="img/icons/Avatar.svg" alt="usuario" /></a>
         </li>
-        <li>
+        <li class="menu">
           <a href="#"><img src="img/icons/icons-menu.svg" alt="usuario" /></a>
         </li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      <h1>Earbuds & Watches</h1>
+      <div class="card_container">
+        <article>
+          <div>
+            <img src="./img/earbuds/earbuds_01.png" alt="earbuds_01" />
+          </div>
+          <div>
+            <div>
+              <h2>Google Pixel Buds Pro</h2>
+              <p>Music & Sound</p>
+            </div>
+            <p>229 €</p>
+            <button>Add to Cart</button>
+          </div>
+        </article>
+        <article></article>
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>

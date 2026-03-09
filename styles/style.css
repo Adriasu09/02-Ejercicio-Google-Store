@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-/** Superusuario - root  
-Cambiar de horizontal a vertical los elementos utilizamos flex **/
+/* Superusuario - root  */
 
 :root {
   --blanco: #ffffff;
@@ -30,10 +29,12 @@ Cambiar de horizontal a vertical los elementos utilizamos flex **/
   --textFooter-weight: normal;
   --textFooter-color: var(--gris);
 }
+
 button {
   all: unset;
   cursor: pointer;
 }
+
 body {
   font-family: var(--fuentePrincipal);
 }
@@ -43,23 +44,29 @@ nav {
   justify-content: space-between;
   padding: 10px 30px;
   align-items: center;
+  height: 60px;
+  width: 100%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .links {
+  display: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+}
+
+.links_contain {
   display: flex;
-  list-style: none;
   gap: 15px;
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: var(--gris);
-  font-size: 12px;
-}
-
-.links img {
+.links_contain img {
   width: 40px;
   height: 40px;
   display: block;
@@ -69,4 +76,47 @@ a {
   display: flex;
   gap: 20px;
   list-style: none;
+  height: 20px;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+}
+
+main {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+h1 {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  color: var(--title-color);
+}
+
+article img {
+  width: 50px;
+}
+
+/* === TABLET === */
+@media only screen and (min-width: 768px) {
+  /* Cambios para pantallas >= 768px */
+  .links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+/* === DESKTOP === */
+@media only screen and (min-width: 1024px) {
+  /* Cambios para pantallas >= 1024px */
 }
