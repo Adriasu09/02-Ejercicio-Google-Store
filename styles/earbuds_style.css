@@ -6,14 +6,21 @@
 
 main {
   padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn_back {
-  size: var(--text-size);
-  color: var(--text-color);
-  font-weight: var(--text-weigth);
+  width: fit-content;
+}
+
+.btn_back a {
   display: flex;
   gap: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--text-size);
+  font-weight: var(--text-weigth);
 }
 
 .photos {

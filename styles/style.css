@@ -145,13 +145,13 @@ article {
   gap: 5px;
 }
 
-.info p{
+.info p {
   font-size: var(--text-size);
   font-weight: var(--text-weight);
   color: var(--text-color);
 }
 
-.add_to_cart{
+.add_to_cart {
   background-color: #1a73e8;
   color: white;
   padding: 20px 50px;
@@ -161,6 +161,7 @@ article {
   align-items: center;
   font-size: var(--textBlod-size);
   font-weight: var(--textBlod-weight);
+  text-decoration: none;
 }
 
 /* === TABLET === */
@@ -177,12 +178,12 @@ article {
     display: none;
   }
 
-  main{
+  main {
     align-items: normal;
     padding: 30px;
   }
 
-  .card_container{
+  .card_container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -192,14 +193,12 @@ article {
 /* === DESKTOP === */
 @media only screen and (min-width: 1024px) {
   /* Cambios para pantallas >= 1024px */
-    main{
+  main {
     padding: 64px 100px;
   }
 
-  .card_container{
+  .card_container {
     gap: 50px;
     justify-content: center;
   }
-
-
 }
