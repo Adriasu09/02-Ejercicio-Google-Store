@@ -17,11 +17,12 @@
 
   <body>
     <!-- ===================== NAVIGATION ===================== -->
-    <nav>
+    <nav aria-label="Main navigation">
       <div class="links_contain">
         <a href="../index.html"
           ><img src="../img/google-logo.png" alt="logo"
         /></a>
+
         <ul class="links">
           <li><a href="#">Phones</a></li>
           <li>
@@ -33,33 +34,36 @@
           <li><a href="#">Subscriptions</a></li>
         </ul>
       </div>
+
       <ul class="icons">
         <li>
-          <a href="#"><img src="../img/icons/Search.svg" alt="buscador" /></a>
+          <a href="#"><img src="../img/icons/Search.svg" alt="Search" /></a>
         </li>
         <li>
-          <a href="#"><img src="../img/icons/Help.svg" alt="ayuda" /></a>
+          <a href="#"><img src="../img/icons/Help.svg" alt="Help" /></a>
         </li>
         <li>
-          <a href="#"> <img src="../img/icons/Cart.svg" alt="carrito" /></a>
+          <a href="#"><img src="../img/icons/Cart.svg" alt="Cart" /></a>
         </li>
         <li>
-          <a href="#"><img src="../img/icons/Avatar.svg" alt="usuario" /></a>
+          <a href="#"
+            ><img src="../img/icons/Avatar.svg" alt="User account"
+          /></a>
         </li>
         <li class="menu">
-          <a href="#"><img src="../img/icons/icons-menu.svg" alt="menú" /></a>
+          <a href="#"
+            ><img src="../img/icons/icons-menu.svg" alt="Open menu"
+          /></a>
         </li>
       </ul>
     </nav>
 
     <!-- ===================== MAIN CONTENT ===================== -->
     <main>
-      <a href="../index.html">
-        <img src="../img/icons/Arrow.svg" alt="" />
+      <a href="../index.html" class="btn_back">
+        <img src="../img/icons/Arrow.svg" alt="arrow" />
         See product details
       </a>
-
-      <div>hola esto es una prueba</div>
 
       <section>
         <div>
@@ -109,6 +113,7 @@
             <p>Choose a Color</p>
           </div>
 
+          <!-- Color selector and purchase actions -->
           <div class="purchase">
             <div class="colors">
               <input type="radio" name="color" id="color-blue" checked />

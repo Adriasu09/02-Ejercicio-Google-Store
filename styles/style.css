@@ -18,17 +18,15 @@
   --font-primary: "Inter", sans-serif;
 
   --title-size: 35px;
-  --title-weight: bold;
   --title-color: var(--gray-dark);
 
   --subtitle-size: 20px;
-  --subtitle-weight: bold;
 
   --text-size: 12px;
   --text-weight: normal;
   --text-color: var(--gray);
 
-  --text-bold-weight: bold;
+  --weight-bold: bold;
 
   --text-footer-size: 8px;
 }
@@ -42,7 +40,7 @@ body {
 
 h1 {
   font-size: var(--title-size);
-  font-weight: var(--title-weight);
+  font-weight: var(--weight-bold);
   color: var(--title-color);
 }
 
@@ -94,20 +92,20 @@ nav {
 
 .links a:hover {
   color: var(--blue);
-  font-weight: bold;
+  font-weight: var(--weight-bold);
 }
 
 /* Active page link */
 .links a[aria-current="page"],
 .links a[aria-current="page"]:hover {
   color: var(--blue);
-  font-weight: bold;
+  font-weight: var(--weight-bold);
   cursor: default;
 }
 
 .icons {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   list-style: none;
   height: 20px;
 }
@@ -120,6 +118,11 @@ nav {
 
 .icons img:hover {
   transform: scale(1.2);
+}
+
+.menu img {
+  filter: invert(29%) sepia(98%) saturate(1352%) hue-rotate(204deg)
+    brightness(98%) contrast(95%);
 }
 
 main {
@@ -182,17 +185,16 @@ article:hover {
   gap: 5px;
 }
 
-
 .add_to_cart {
   background-color: var(--blue);
-  color: white;
+  color: var(--white);
   padding: 20px 50px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: var(--text-size);
-  font-weight: var(--text-bold-weight);
+  font-weight: var(--weight-bold);
   text-decoration: none;
 }
 

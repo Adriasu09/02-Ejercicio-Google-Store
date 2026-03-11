@@ -19,6 +19,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  width: 100%;
 }
 
 figure {
@@ -33,12 +34,17 @@ figure {
   background-color: var(--gray-light);
   border-radius: 20px;
   width: 100%;
-  height: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .image img {
-  width: 100%;
-  padding: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .info_product,
@@ -50,8 +56,9 @@ figure {
 
 .price_summary {
   color: var(--title-color);
-  font-weight: var(--subtitle-weight);
+  font-weight: var(--weight-bold);
   font-size: var(--subtitle-size);
+  margin-bottom: 15px;
 }
 
 hr {
@@ -89,7 +96,6 @@ hr {
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid transparent;
   outline: 1px solid transparent;
   outline-offset: 1px;
   transition: outline 0.1s ease;
@@ -131,13 +137,13 @@ hr {
   gap: 25px;
   background-color: var(--gray-light);
   border-radius: 5px;
-  padding: 30px 15px 15px 15px;
+  padding: 30px 15px 15px;
   width: 100%;
 }
 
 .price_purchase {
   color: var(--title-color);
-  font-weight: var(--title-weight);
+  font-weight: var(--weight-bold);
   font-size: var(--title-size);
 }
 
@@ -163,7 +169,7 @@ select:focus {
   text-align: center;
   color: var(--white);
   font-size: var(--text-size);
-  font-weight: var(--text-bold-weight);
+  font-weight: var(--weight-bold);
   border-radius: 4px;
 }
 
@@ -173,7 +179,7 @@ select:focus {
 }
 
 .delivery p {
-  font-weight: var(--text-bold-weight);
+  font-weight: var(--weight-bold);
 }
 
 .delivery span {
@@ -182,6 +188,10 @@ select:focus {
 
 /* === TABLET === */
 @media only screen and (min-width: 768px) {
+  .image {
+    height: 400px;
+  }
+
   .purchase {
     flex-direction: row;
     gap: 23px;
@@ -189,7 +199,7 @@ select:focus {
   }
 
   .purchase_details {
-    padding: 40px 15px 15px 15px;
+    padding: 40px 15px 15px;
   }
 }
 
@@ -209,7 +219,7 @@ select:focus {
     display: flex;
     align-items: center;
     gap: 23px;
-    height: 450px;
+    height: 520px;
     padding-left: 20px;
   }
 
@@ -237,10 +247,13 @@ select:focus {
     flex-direction: column;
   }
 
+  .colors {
+    min-height: 120px;
+    align-items: flex-start;
+  }
+
   .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
   }
 
   .image img {
