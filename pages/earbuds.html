@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <!-- ===================== NAVIGATION ===================== -->
     <nav>
       <div class="links_contain">
         <a href="../index.html"
@@ -23,7 +24,9 @@
         /></a>
         <ul class="links">
           <li><a href="#">Phones</a></li>
-          <li><a href="../pages/earbuds.html">Earbuds</a></li>
+          <li>
+            <a href="../pages/earbuds.html" aria-current="page">Earbuds</a>
+          </li>
           <li><a href="../pages/watches.html">Watches</a></li>
           <li><a href="#">Smart Home</a></li>
           <li><a href="#">Accessories</a></li>
@@ -43,59 +46,106 @@
         <li>
           <a href="#"><img src="../img/icons/Avatar.svg" alt="usuario" /></a>
         </li>
-        <li>
-          <a href="#"
-            ><img src="../img/icons/icons-menu.svg" alt="usuario"
-          /></a>
+        <li class="menu">
+          <a href="#"><img src="../img/icons/icons-menu.svg" alt="menú" /></a>
         </li>
       </ul>
     </nav>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
     <main>
-      <button class="btn_back">
-        <a href="../index.html">
-          <img src="../img/icons/Arrow.svg" alt="back" />
-          See product details
-        </a>
-      </button>
+      <a href="../index.html">
+        <img src="../img/icons/Arrow.svg" alt="" />
+        See product details
+      </a>
+
       <section>
         <div>
-          <div class="photos">
+          <figure>
             <div class="thumbnails">
-              <img src="../img/earbuds/earbuds_01.png" alt="earbuds_01" />
-              <img src="../img/earbuds/earbuds_02.png" alt="earbuds_02" />
-              <img src="../img/earbuds/earbuds_03.png" alt="earbuds_03" />
-              <img src="../img/earbuds/earbuds_04.png" alt="earbuds_04" />
+              <div>
+                <img
+                  src="../img/earbuds/earbuds_01.png"
+                  alt="Google Pixel Buds Pro - vista frontal con estuche abierto"
+                />
+              </div>
+              <div>
+                <img
+                  src="../img/earbuds/earbuds_02.png"
+                  alt="Google Pixel Buds Pro - vista lateral"
+                />
+              </div>
+              <div>
+                <img
+                  src="../img/earbuds/earbuds_03.png"
+                  alt="Google Pixel Buds Pro - auricular derecho"
+                />
+              </div>
+              <div>
+                <img
+                  src="../img/earbuds/earbuds_04.png"
+                  alt="Google Pixel Buds Pro - estuche cerrado"
+                />
+              </div>
             </div>
+
             <div class="image">
-              <img src="../img/earbuds/earbuds_01.png" alt="earbuds_01" />
+              <img
+                src="../img/earbuds/earbuds_01.png"
+                alt="Google Pixel Buds Pro - vista frontal con estuche abierto"
+              />
             </div>
-          </div>
+          </figure>
         </div>
-        <div class="infor_product">
-          <div>
-            <h1>Google Pixel Bunds Pro</h1>
+
+        <div class="info_product">
+          <div class="description">
+            <h1>Google Pixel Buds Pro</h1>
             <p>Music & Sound</p>
-            <h2>229 €</h2>
+            <p class="price_summary">229 €</p>
             <hr />
             <p>Choose a Color</p>
           </div>
-          <div>
+
+          <div class="purchase">
             <div class="colors">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <input type="radio" name="color" id="color-blue" checked />
+              <label for="color-blue" class="color-swatch swatch-blue"></label>
+
+              <input type="radio" name="color" id="color-gray-light" />
+              <label
+                for="color-gray-light"
+                class="color-swatch swatch-gray-light"
+              ></label>
+
+              <input type="radio" name="color" id="color-dark" />
+              <label for="color-dark" class="color-swatch swatch-dark"></label>
+
+              <input type="radio" name="color" id="color-gray" />
+              <label for="color-gray" class="color-swatch swatch-gray"></label>
+
+              <input type="radio" name="color" id="color-green" />
+              <label
+                for="color-green"
+                class="color-swatch swatch-green"
+              ></label>
+
+              <input type="radio" name="color" id="color-red" />
+              <label for="color-red" class="color-swatch swatch-red"></label>
             </div>
-            <div>
-              <h1>229 €</h1>
+
+            <div class="purchase_details">
+              <p class="price_purchase">229 €</p>
               <hr />
-              <div class="select">
-                <p>1</p>
-                <div></div>
-              </div>
+              <select name="quantity" id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
               <button>Add to cart</button>
+
               <div class="delivery">
                 <img src="../img/icons/Delivery.svg" alt="Delivers" />
                 <p>Delivers 29 Apr to <span>08023</span></p>
@@ -105,5 +155,36 @@
         </div>
       </section>
     </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <div>
+        <!-- Social media links -->
+        <div class="social-icons">
+          <a href="#"><img src="../img/icons/SM-x.svg" alt="X" /></a>
+          <a href="#"
+            ><img src="../img/icons/SM-instagram.svg" alt="Instagram"
+          /></a>
+          <a href="#"
+            ><img src="../img/icons/SM-facebook.svg" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="../img/icons/SM-youtube.svg" alt="YouTube"
+          /></a>
+          <a href="#"><img src="../img/icons/SM-tiktok.svg" alt="TikTok" /></a>
+        </div>
+
+        <!-- Legal links and country selector -->
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Google Nest Commitment to Privacy</a>
+          <a href="#">Sales Terms</a>
+          <a href="#">Terms of Service</a>
+          <div class="country">
+            <img src="../img/icons/Spain.svg" alt="Spain" /> Spain
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

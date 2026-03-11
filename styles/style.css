@@ -30,7 +30,6 @@
   --text-weight: normal;
   --text-color: var(--gray);
 
-  --text-bold-size: 12px;
   --text-bold-weight: bold;
   --text-bold-color: var(--gray);
 
@@ -39,16 +38,28 @@
   --text-footer-color: var(--gray);
 }
 
-button {
-  all: unset;
-  cursor: pointer;
-}
-
 body {
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+h1 {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  color: var(--title-color);
+}
+
+p {
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  color: var(--text-color);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
 }
 
 /* === NAVIGATION === */
@@ -126,18 +137,6 @@ main {
   gap: 20px;
 }
 
-h1 {
-  font-size: var(--title-size);
-  font-weight: var(--title-weight);
-  color: var(--title-color);
-}
-
-h2 {
-  font-size: var(--subtitle-size);
-  font-weight: var(--subtitle-weight);
-  color: var(--subtitle-color);
-}
-
 article {
   display: flex;
   flex-direction: column;
@@ -202,7 +201,7 @@ article:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--text-bold-size);
+  font-size: var(--text-size);
   font-weight: var(--text-bold-weight);
   text-decoration: none;
 }
@@ -308,7 +307,6 @@ footer > div {
 
 /* === DESKTOP === */
 @media only screen and (min-width: 1024px) {
-  /* Cambios para pantallas >= 1024px */
   main {
     padding: 30px 100px;
   }
