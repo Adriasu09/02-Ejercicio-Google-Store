@@ -13,6 +13,13 @@ Cambiar de horizontal a vertical los elementos utilizamos flex **/
   --gris: #57626b;
   --grisOscuro: #353a49;
   --azul: #1a73e8;
+  /** Color search with Google Colorzilla extension & name with encycolorpedia.com **/
+  --light-Blue: #9EC5EA;
+  --wild-sand: #E7E4DE;
+  --cool-ashy-gray: #4C4B4E;
+  --gray-apu: #D3D7DA;
+  --yellowish-beige: #E2E5B6;
+  --soft-brown: #E18572;
   --fuentePrincipal: "Inter", sans-serif;
   --title-size: 35px;
   --title-weight: bold;
@@ -104,6 +111,10 @@ section {
 
 .image img {
   width: 400px;
+}
+/* Div "Infor_product" */
+.infor_product{
+  
 }
 
 footer {
