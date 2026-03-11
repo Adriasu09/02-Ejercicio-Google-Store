@@ -1,96 +1,150 @@
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/** Superusuario - root  
-Cambiar de horizontal a vertical los elementos utilizamos flex **/
-
+/* === CUSTOM PROPERTIES === */
 :root {
-  --blanco: #ffffff;
-  --grisClaro: #f8f9fa;
-  --gris: #57626b;
-  --grisOscuro: #353a49;
-  --azul: #1a73e8;
-  --fuentePrincipal: "Inter", sans-serif;
+  /* Colors */
+  --white: #ffffff;
+  --gray-light: #f8f9fa;
+  --gray: #57626b;
+  --gray-dark: #353a49;
+  --blue: #1a73e8;
+
+  /* Typography */
+  --font-primary: "Inter", sans-serif;
+
   --title-size: 35px;
   --title-weight: bold;
-  --title-color: var(--grisOscuro);
+  --title-color: var(--gray-dark);
+
   --subtitle-size: 20px;
   --subtitle-weight: bold;
-  --subtitle-color: var(--grisOscuro);
+  --subtitle-color: var(--gray-dark);
+
   --text-size: 12px;
   --text-weight: normal;
-  --text-color: var(--gris);
-  --textBlod-size: 12px;
-  --textBlod-weight: bold;
-  --textBlod-color: var(--gris);
-  --textFooter-size: 8px;
-  --textFooter-weight: normal;
-  --textFooter-color: var(--gris);
+  --text-color: var(--gray);
+
+  --text-bold-size: 12px;
+  --text-bold-weight: bold;
+  --text-bold-color: var(--gray);
+
+  --text-footer-size: 8px;
+  --text-footer-weight: normal;
+  --text-footer-color: var(--gray);
 }
 
+/* === BASE STYLES === */
 button {
   all: unset;
   cursor: pointer;
 }
 
 body {
-  font-family: var(--fuentePrincipal);
+  font-family: var(--font-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* === NAVIGATION === */
 nav {
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
   align-items: center;
+  height: 60px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.links {
+.links_contain {
   display: flex;
-  list-style: none;
   gap: 15px;
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: var(--gris);
-  font-size: 12px;
-}
-
-.links img {
+.links_contain img {
   width: 40px;
   height: 40px;
   display: block;
+}
+
+/* Hidden on mobile, shown on tablet+ */
+.links {
+  display: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* Active page link */
+.links a[aria-current="page"],
+.links a[aria-current="page"]:hover {
+  color: var(--blue);
+  font-weight: bold;
+  cursor: default;
 }
 
 .icons {
   display: flex;
   gap: 20px;
   list-style: none;
+  height: 20px;
 }
 
+.icons img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+/* === MAIN CONTENT === */
 main {
+  flex: 1;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .btn_back {
-  size: var(--text-size);
+  font-size: var(--text-size);
   color: var(--text-color);
-  font-weight: var(--text-weigth);
+  font-weight: var(--text-weight);
   display: flex;
   gap: 8px;
 }
 
+/* === PRODUCT GALLERY === */
 section {
-  display: flex;
+  gap: 25px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .photos {
   display: flex;
+  align-items: center;
+  gap: 23px;
+  height: 400px;
 }
 
 .thumbnails {
@@ -99,103 +153,125 @@ section {
   gap: 8px;
 }
 
+.thumbnails div {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid var(--gray);
+  border-radius: 50%;
+}
+
 .thumbnails img {
-  width: 50px;
   height: 50px;
+}
+
+.image {
+  background-color: var(--gray-light);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image img {
   width: 400px;
 }
 
+/* === FOOTER === */
 footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   padding: 15px 20px;
-  background-color: var(--grisClaro);
-  color: var(--textFooter-color);
+  color: var(--text-footer-color);
+  background-color: var(--gray-light);
 }
 
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Social icons */
 .social-icons {
   display: flex;
   gap: 17px;
-  order: 1;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons img {
   height: 22px;
+  display: block;
+}
+
+/* Footer links & country selector */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-footer-color);
+  font-size: var(--text-footer-size);
 }
 
 .country {
   display: flex;
   align-items: center;
   gap: 5px;
-  order: 3;
-  font-size: var(--textFooter-size);
-  padding: 5px;
+  font-size: var(--text-footer-size);
 }
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  order: 2;
+.country img {
+  width: 24px;
 }
 
-.footer-links a {
-  font-size: var(--textFooter-size);
-}
+/* === TABLET (min-width: 768px) === */
+@media only screen and (min-width: 768px) {
+  .links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+  }
 
-/* tablet*/
-@media (min-width: 768px) {
-  footer {
+  .menu {
+    display: none;
+  }
+
+  footer > div {
     flex-direction: row;
     align-items: center;
-    text-align: left;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .footer-links {
     flex-direction: row;
-    gap: 40px;
-    margin: 40px;
+    gap: 17px;
+    align-items: center;
+  }
+
+  .country {
+    order: -1;
   }
 
   .social-icons img {
     height: 12px;
   }
-
-  .country {
-    order: 2;
-  }
 }
 
-/* Destop */
-@media (min-width: 1024px) {
-  footer {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 15px 20px;
-    gap: 5px;
-    background-color: var(--grisClaro);
-  }
-
-  .social-icons {
-    order: 1;
-    height: 12px;
-    align-items: center;
-  }
-
-  /* margin-left: auto empuja el País y los Links a la derecha  */
-  .country {
-    order: 2;
-    margin-left: auto;
-  }
-
-  .footer-links {
-    order: 3;
-    flex-direction: row;
+/* === DESKTOP (min-width: 1024px) === */
+@media only screen and (min-width: 1024px) {
+  footer > div {
+    max-width: 1200px;
   }
 }
