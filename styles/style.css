@@ -23,19 +23,14 @@
 
   --subtitle-size: 20px;
   --subtitle-weight: bold;
-  --subtitle-color: var(--gray-dark);
 
   --text-size: 12px;
   --text-weight: normal;
   --text-color: var(--gray);
 
-  --text-bold-size: 12px;
   --text-bold-weight: bold;
-  --text-bold-color: var(--gray);
 
   --text-footer-size: 8px;
-  --text-footer-weight: normal;
-  --text-footer-color: var(--gray);
 }
 
 /* === BASE STYLES === */
@@ -131,6 +126,7 @@ main {
   font-weight: var(--text-weight);
   display: flex;
   gap: 8px;
+  text-decoration: none;
 }
 
 /* === PRODUCT GALLERY === */
@@ -140,7 +136,7 @@ section {
   grid-template-columns: 2fr 1fr;
 }
 
-.photos {
+figure {
   display: flex;
   align-items: center;
   gap: 23px;
