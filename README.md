@@ -10,7 +10,7 @@ Hola equipo! 👋 Esta guía explica paso a paso cómo trabajar en el repositori
 | ----------- | ------------------------------------------------------------- |
 | `main`      | Código final en producción. **Nadie sube aquí directamente.** |
 | `develop`   | Rama de integración. **Tampoco se sube directamente.**        |
-| `tu-nombre` | Tu rama personal. **Aquí es donde tú trabajas.**              |
+| `tu-rama` | Tu rama personal. **Aquí es donde tú trabajas.**              |
 
 > ⚠️ **Regla de oro:** Nunca hagas cambios directamente en `main` ni en `develop`. Todo tu trabajo va en tu rama personal.
 
@@ -38,17 +38,17 @@ Abre la terminal de VS Code (`Ctrl + ñ` o `View > Terminal`) y escribe:
 git branch
 ```
 
-Verás una lista de ramas. La que tiene `*` al lado es en la que estás. Debe ser la tuya (por ejemplo `maria`).
+Verás una lista de ramas. La que tiene `*` al lado es en la que estás. Debe ser la tuya (por ejemplo `feat/...`).
 
 ---
 
 ### 3️⃣ Cámbiate a tu rama si no estás en ella
 
 ```bash
-git checkout tu-nombre
+git checkout nombre-de-tu-rama
 ```
 
-> 💡 Reemplaza `tu-nombre` con el nombre de tu rama real. Ejemplo: `git checkout maria`
+> 💡 Reemplaza `nombre-de-tu-rama` con el nombre de tu rama real. Ejemplo: `git checkout feat/...`
 
 ---
 
@@ -107,10 +107,10 @@ git commit -m "descripción breve de lo que hiciste"
 ### 7️⃣ Sube tu rama a GitHub
 
 ```bash
-git push origin tu-nombre
+git push origin nombre-de-tu-rama
 ```
 
-> 💡 Ejemplo: `git push origin maria`
+> 💡 Ejemplo: `git push origin feat/...`
 
 ---
 
@@ -122,7 +122,7 @@ Un Pull Request (PR) es una solicitud para que tu código sea revisado y luego u
 2. Verás un banner amarillo que dice **"Compare & pull request"** → haz clic ahí
 3. Asegúrate de que la configuración sea:
    - **base:** `develop` ← hacia donde va tu código
-   - **compare:** `tu-nombre` ← tu rama con los cambios
+   - **compare:** `nombre-de-tu-rama` ← tu rama con los cambios
 4. Escribe un **título claro** que describa qué hiciste
 5. En la descripción puedes explicar brevemente los cambios
 6. Haz clic en **"Create pull request"** ✅
@@ -134,7 +134,7 @@ Un Pull Request (PR) es una solicitud para que tu código sea revisado y luego u
 ### 9️⃣ Si te piden hacer cambios en el PR
 
 1. Vuelve a VS Code
-2. Asegúrate de estar en tu rama: `git checkout tu-nombre`
+2. Asegúrate de estar en tu rama: `git checkout nombre-de-tu-rama`
 3. Haz los cambios que te pidieron
 4. Repite los pasos 6 y 7 (add → commit → push)
 5. El PR se actualizará automáticamente en GitHub 🔄
@@ -144,26 +144,26 @@ Un Pull Request (PR) es una solicitud para que tu código sea revisado y luego u
 ## ❓ Errores comunes
 
 **"You are not on the right branch"**
-→ Usa `git checkout tu-nombre` para cambiarte a tu rama.
+→ Usa `git checkout nombre-de-tu-rama` para cambiarte a tu rama.
 
 **"Please commit your changes or stash them before you merge"**
 → Tienes cambios sin guardar. Haz `git add .` y `git commit -m "tu mensaje"` primero.
 
 **"Rejected — non-fast-forward"**
-→ Alguien hizo cambios antes que tú. Corre `git pull origin tu-nombre` primero y luego vuelve a intentar el push.
+→ Alguien hizo cambios antes que tú. Corre `git pull origin nombre-de-tu-rama` primero y luego vuelve a intentar el push.
 
 ---
 
 ## 💬 Resumen rápido (para tener a mano)
 
 ```bash
-git checkout tu-nombre          # cambiarte a tu rama
+git checkout nombre-de-tu-rama          # cambiarte a tu rama
 git pull origin develop         # actualizar con lo último
 # ... trabajas en VS Code ...
 git status                      # ver cambios
 git add .                       # preparar cambios
 git commit -m "tu mensaje"      # guardar cambios
-git push origin tu-nombre       # subir a GitHub
+git push origin nombre-de-tu-rama       # subir a GitHub
 # → Ir a GitHub y abrir el Pull Request
 ```
 
