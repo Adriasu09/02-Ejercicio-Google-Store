@@ -192,7 +192,8 @@ figure {
 
 .info_product,
 .description,
-.purchase, .purchase_details {
+.purchase,
+.purchase_details {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -272,18 +273,40 @@ fieldset input[type="radio"]:checked+.color-swatch {
 .color-swatch:hover {
   outline: 1px solid var(--gray);
 }
+
 .purchase_details {
   padding: 30px 15px 15px;
   background-color: var(--gray-light);
   border-radius: 5px;
 }
 
-
 .price_purchase {
   font-size: var(--title-size);
   font-weight: var(--title-weight);
-color: var(--gray-dark);
+  color: var(--gray-dark);
 }
+
+.select_quantity {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+select {
+width: 80px;
+height: 35px;
+padding: 0 10px;
+border-radius: 5px;
+border: 0.5px solid var(--gray);
+font-size: var(--text-size);
+color: var(--gray);
+cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--gray-dark);
+}
+
 /* === FOOTER === */
 footer {
   display: flex;
