@@ -34,17 +34,30 @@
 }
 
 /* === BASE STYLES === */
-button {
-  all: unset;
-  cursor: pointer;
-}
-
 body {
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  color: var(--gray-dark);
+}
+
+p {
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  color: var(--gray);
+}
+
 
 /* === NAVIGATION === */
 nav {
@@ -117,7 +130,7 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
 .btn_back {
@@ -177,6 +190,100 @@ figure {
   width: 100%;
 }
 
+.info_product,
+.description,
+.purchase, .purchase_details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.price_summary {
+  font-size: var(--subtitle-size);
+  font-weight: var(--subtitle-weight);
+  color: var(--gray-dark);
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--gray);
+}
+
+fieldset {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+}
+
+/* Hide radio inputs */
+fieldset input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  position: absolute;
+}
+
+/* Base style of each circle */
+.color-swatch {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  transition: outline 0.1s ease;
+}
+
+/* Colors */
+.swatch-blue {
+  background-color: #9ec6ea;
+}
+
+.swatch-gray-light {
+  background-color: #e7e3e0;
+}
+
+.swatch-dark {
+  background-color: #4b4b4d;
+}
+
+.swatch-gray {
+  background-color: #d2d7da;
+}
+
+.swatch-green {
+  background-color: #dfe5b7;
+}
+
+.swatch-red {
+  background-color: #e18472;
+}
+
+/* The selection shows an outline. */
+fieldset input[type="radio"]:checked+.color-swatch {
+  outline: 1px solid var(--gray-dark);
+}
+
+/* Hover over the unselected ones */
+.color-swatch:hover {
+  outline: 1px solid var(--gray);
+}
+.purchase_details {
+  padding: 30px 15px 15px;
+  background-color: var(--gray-light);
+  border-radius: 5px;
+}
+
+
+.price_purchase {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+color: var(--gray-dark);
+}
 /* === FOOTER === */
 footer {
   display: flex;
@@ -267,12 +374,15 @@ footer>div {
 
 /* === DESKTOP (min-width: 1024px) === */
 @media only screen and (min-width: 1024px) {
-   section {
+  section {
     display: grid;
-    grid-template-columns: 2fr 1fr;}
+    grid-template-columns: 2fr 1fr;
+  }
+
   .thumbnails {
     display: flex;
-    }
+  }
+
   footer>div {
     max-width: 1200px;
   }
