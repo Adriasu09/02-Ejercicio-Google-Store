@@ -114,7 +114,7 @@ nav {
 /* === MAIN CONTENT === */
 main {
   flex: 1;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -132,19 +132,19 @@ main {
 /* === PRODUCT GALLERY === */
 section {
   gap: 25px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 figure {
   display: flex;
   align-items: center;
   gap: 23px;
-  height: 400px;
+  width: 100%;
 }
 
 .thumbnails {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 8px;
 }
@@ -174,7 +174,7 @@ figure {
 }
 
 .image img {
-  width: 400px;
+  width: 100%;
 }
 
 /* === FOOTER === */
@@ -186,7 +186,7 @@ footer {
   background-color: var(--gray-light);
 }
 
-footer > div {
+footer>div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -243,7 +243,7 @@ footer > div {
     display: none;
   }
 
-  footer > div {
+  footer>div {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -267,7 +267,13 @@ footer > div {
 
 /* === DESKTOP (min-width: 1024px) === */
 @media only screen and (min-width: 1024px) {
-  footer > div {
+   section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;}
+  .thumbnails {
+    display: flex;
+    }
+  footer>div {
     max-width: 1200px;
   }
 }
