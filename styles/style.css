@@ -210,7 +210,7 @@ figure {
 #img2:checked ~ .thumbnails label:nth-child(2),
 #img3:checked ~ .thumbnails label:nth-child(3),
 #img4:checked ~ .thumbnails label:nth-child(4) {
-  outline: 2px solid var(--primary-color);
+  outline: 1px solid var(--primary-color);
   border-radius: 50%;
 }
 
@@ -510,6 +510,11 @@ footer > div {
     justify-content: center;
     border: 0.5px solid var(--gray);
     border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+
+  .thumbnails label:hover {
+    transform: scale(1.1);
   }
 
   .thumbnails img {
