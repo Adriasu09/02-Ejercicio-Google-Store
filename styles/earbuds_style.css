@@ -243,6 +243,14 @@ select:focus {
     height: 50px;
   }
 
+  .thumbnails div {
+    cursor: pointer;
+  }
+
+  .thumbnails div.active {
+    border: 2px solid var(--gray-dark);
+  }
+
   .purchase {
     flex-direction: column;
   }

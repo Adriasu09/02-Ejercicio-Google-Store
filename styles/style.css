@@ -145,6 +145,7 @@ article {
   border-radius: 10px;
   padding: 20px;
   border: 2px solid transparent;
+  cursor: pointer;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -196,6 +197,34 @@ article:hover {
   font-size: var(--text-size);
   font-weight: var(--weight-bold);
   text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.add_to_cart:hover {
+  opacity: 0.85;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
 }
 
 /* === FOOTER === */

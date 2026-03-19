@@ -41,8 +41,8 @@
         <li>
           <a href="#"><img src="img/icons/Help.svg" alt="ayuda" /></a>
         </li>
-        <li>
-          <a href="#"> <img src="img/icons/Cart.svg" alt="carrito" /></a>
+        <li class="cart-icon">
+          <a href="#"><img src="img/icons/Cart.svg" alt="carrito" /></a>
         </li>
         <li>
           <a href="#"><img src="img/icons/Avatar.svg" alt="usuario" /></a>
@@ -57,7 +57,7 @@
     <main>
       <h1>Earbuds & Watches</h1>
       <div class="card_container">
-        <article>
+        <article data-href="./pages/earbuds.html">
           <div class="img_container">
             <img src="./img/earbuds/earbuds_01.png" alt="earbuds_01" />
           </div>
@@ -67,12 +67,10 @@
               <p>Music & Sound</p>
             </div>
             <h2>229 €</h2>
-            <a class="add_to_cart" href="./pages/earbuds.html"
-              ><button>Add to Cart</button></a
-            >
+            <button class="add_to_cart">Add to Cart</button>
           </div>
         </article>
-        <article>
+        <article data-href="./pages/watches.html">
           <div class="img_container">
             <img
               src="./img/smartwatch/smartwatch_black.png"
@@ -85,9 +83,7 @@
               <p>Health & Fitness Tracker</p>
             </div>
             <h2>99,95 €</h2>
-            <a class="add_to_cart" href="./pages/watches.html"
-              ><button>Add to Cart</button></a
-            >
+            <button class="add_to_cart">Add to Cart</button>
           </div>
         </article>
       </div>
@@ -121,5 +117,6 @@
         </div>
       </div>
     </footer>
+  <script src="./app.js" defer></script>
   </body>
 </html>
