@@ -38,6 +38,12 @@ body {
   min-height: 100vh;
 }
 
+/* Contenedor raíz de JS: display:contents lo hace transparente al layout,
+   así nav/main/footer son hijos directos del body y heredan su flex. */
+#root {
+  display: contents;
+}
+
 h1 {
   font-size: var(--title-size);
   font-weight: var(--weight-bold);
