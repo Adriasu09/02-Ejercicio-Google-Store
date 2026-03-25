@@ -1,4 +1,19 @@
+/* === ACCESSIBILITY UTILITIES === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* === MAIN CONTENT === */
 main {
+  flex: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -73,14 +88,14 @@ hr {
   gap: 25px;
 }
 
-.colors {
+fieldset {
   display: flex;
   gap: 8px;
   align-items: center;
+  border: none;
 }
 
-/* Hide radio inputs */
-.colors input[type="radio"] {
+fieldset input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   width: 0;
@@ -89,7 +104,6 @@ hr {
   position: absolute;
 }
 
-/* Base style of each circle */
 .color-swatch {
   display: block;
   width: 30px;
@@ -101,7 +115,6 @@ hr {
   transition: outline 0.1s ease;
 }
 
-/* Colors */
 .swatch-blue {
   background-color: #9ec6ea;
 }
@@ -121,12 +134,10 @@ hr {
   background-color: #e18472;
 }
 
-/* The selection shows an outline. */
 .colors input[type="radio"]:checked + .color-swatch {
   outline: 1px solid var(--gray-dark);
 }
 
-/* Hover over the unselected ones */
 .color-swatch:hover {
   outline: 1px solid var(--gray);
 }
@@ -147,8 +158,14 @@ hr {
   font-size: var(--title-size);
 }
 
+.select_quantity {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 select {
-  width: 60px;
+  width: 80px;
   height: 35px;
   padding: 0 10px;
   border: 0.5px solid var(--gray);
@@ -157,13 +174,14 @@ select {
   cursor: pointer;
 }
 
-select:focus {
-  outline: none;
+select:focus-visible {
+  outline: 1px solid var(--gray-light);
+  outline-offset: 2px;
   border-color: var(--gray-dark);
 }
 
 .purchase_details button {
-  width: 320px;
+  flex: 1;
   padding: 20px 0;
   background-color: var(--blue);
   text-align: center;
@@ -171,6 +189,16 @@ select:focus {
   font-size: var(--text-size);
   font-weight: var(--weight-bold);
   border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.purchase_details button:hover {
+  opacity: 0.85;
+}
+
+.purchase_details button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
 }
 
 .delivery {
@@ -266,5 +294,17 @@ select:focus {
 
   .image img {
     width: 500px;
+  }
+
+  .select_quantity {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  select {
+    height: 100%;
+    width: 90px;
   }
 }
