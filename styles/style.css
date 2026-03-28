@@ -320,6 +320,48 @@ footer > div {
   width: 24px;
 }
 
+/* === MOBILE MENU DROPDOWN === */
+
+.mobile-menu {
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu--hidden {
+  display: none;
+}
+
+.mobile-menu__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu__links li {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.mobile-menu__links a {
+  display: block;
+  padding: 14px 30px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--text-size);
+  transition: color 0.2s;
+}
+
+.mobile-menu__links a:hover,
+.mobile-menu__links a[aria-current="page"] {
+  color: var(--blue);
+  font-weight: var(--weight-bold);
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
 /* === TABLET === */
 @media only screen and (min-width: 768px) {
   .links {

@@ -47,9 +47,19 @@ export function renderNav(activeCategory, imgPrefix = "./") {
           <a href="#"><img class="icon" src="${imgPrefix}assets/icons/Avatar.svg" alt="Account" /></a>
         </li>
         <li class="menu">
-          <a href="#"><img class="icon" src="${imgPrefix}assets/icons/icons-menu.svg" alt="Menu" /></a>
+          <a href="#" class="mobile-menu-toggle"><img class="icon" src="${imgPrefix}assets/icons/icons-menu.svg" alt="Menu" /></a>
         </li>
       </ul>
     </nav>
+    <div class="mobile-menu mobile-menu--hidden">
+      <ul class="mobile-menu__links">
+        <li><a href="#">Phones</a></li>
+        <li><a href="${earbudsHref}" ${isActive("Earbuds")}>Earbuds</a></li>
+        <li><a href="${watchesHref}" ${isActive("Watches")}>Watches</a></li>
+        <li><a href="#">Smart Home</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Subscriptions</a></li>
+      </ul>
+    </div>
   `;
 }
