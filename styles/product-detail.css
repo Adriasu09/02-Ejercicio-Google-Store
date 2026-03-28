@@ -21,13 +21,14 @@ main {
   align-items: flex-start;
 }
 
-main > a {
+.btn_back {
   display: flex;
   gap: 8px;
   text-decoration: none;
   color: var(--text-color);
   font-size: var(--text-size);
   font-weight: var(--text-weight);
+  width: fit-content;
 }
 
 section {

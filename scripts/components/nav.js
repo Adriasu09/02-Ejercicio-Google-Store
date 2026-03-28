@@ -33,21 +33,21 @@ export function renderNav(activeCategory, imgPrefix = "./") {
       </div>
       <ul class="icons">
         <li>
-          <a href="#"><img src="${imgPrefix}assets/icons/Search.svg" alt="Search" /></a>
+          <a href="#"><img class="icon" src="${imgPrefix}assets/icons/Search.svg" alt="Search" /></a>
         </li>
         <li>
-          <a href="#"><img src="${imgPrefix}assets/icons/Help.svg" alt="Help" /></a>
+          <a href="#"><img class="icon" src="${imgPrefix}assets/icons/Help.svg" alt="Help" /></a>
         </li>
         <li class="cart-icon">
-          <a href="#" class="cart-icon__toggle"><img src="${imgPrefix}assets/icons/Cart.svg" alt="Cart" /></a>
-          <span class="cart-badge" id="cart-badge"></span>
+          <a href="#" class="cart-icon__toggle"><img class="icon" src="${imgPrefix}assets/icons/Cart.svg" alt="Cart" />
+          <span class="cart-badge" id="cart-badge"></span></a>
           ${renderCartDropdown(imgPrefix)}
         </li>
         <li>
-          <a href="#"><img src="${imgPrefix}assets/icons/Avatar.svg" alt="Account" /></a>
+          <a href="#"><img class="icon" src="${imgPrefix}assets/icons/Avatar.svg" alt="Account" /></a>
         </li>
         <li class="menu">
-          <a href="#"><img src="${imgPrefix}assets/icons/icons-menu.svg" alt="Menu" /></a>
+          <a href="#"><img class="icon" src="${imgPrefix}assets/icons/icons-menu.svg" alt="Menu" /></a>
         </li>
       </ul>
     </nav>
